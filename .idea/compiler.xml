@@ -6,16 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="workloadmangement" />
+        <module name="workloadmanagement" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="workloadmangement" target="1.8" />
+      <module name="workloadmanagement" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="workloadmangement" options="-parameters" />
+      <module name="workloadmanagement" options="-parameters" />
     </option>
   </component>
 </project>

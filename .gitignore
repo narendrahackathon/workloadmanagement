@@ -1,0 +1,13 @@
+**/target
+**/bin
+**/.idea
+**/*.iml
+**/pom.xml.bak
+**/.classpath
+**/.settings
+**/.project
+**/.DS_Store
+**/.vscode
+**/.factorypath
+report/
+/target/

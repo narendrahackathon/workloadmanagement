@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/workloadmangement.iml" filepath="$PROJECT_DIR$/workloadmangement.iml" />
+      <module fileurl="file://$PROJECT_DIR$/workloadmanagement.iml" filepath="$PROJECT_DIR$/workloadmanagement.iml" />
     </modules>
   </component>
 </project>
