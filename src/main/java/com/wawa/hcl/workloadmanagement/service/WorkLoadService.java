@@ -14,7 +14,7 @@ public class WorkLoadService {
     @Autowired
     private OrderRepository orderRepository;
 
-    public OrderItem placeOrder(OrderRequest orderRequest) {
+    public OrderItem placeOrder(OrderItem orderRequest) {
          return orderRepository.save(orderRequest);
     }
 
