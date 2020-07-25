@@ -13,7 +13,7 @@ public class ConsolidatorImpl implements Consolidator {
 	@Override
 	public void consolidate(Item item) {
 		// Check if all the items are "processed"
-		wls.saveItem(item);
+//		wls.saveItem(item);
 		// post message back.
 
 	}

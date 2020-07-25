@@ -13,7 +13,7 @@ public class StationImpl implements Station {
 	@Override
 	public void process(Item item) {
 		item.setItem_status("PROCESSED");
-		wls.saveItem(item);
+//		wls.saveItem(item);
 
 	}
 
