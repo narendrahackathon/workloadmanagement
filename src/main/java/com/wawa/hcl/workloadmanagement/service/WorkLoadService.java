@@ -1,11 +1,12 @@
 package com.wawa.hcl.workloadmanagement.service;
 
 import com.wawa.hcl.workloadmanagement.dao.OrderRepository;
+import com.wawa.hcl.workloadmanagement.model.OrderRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.wawa.hcl.workloadmanagement.entity.Order;
+import com.wawa.hcl.workloadmanagement.dao.OrderItem;
 
 @Service
 public class WorkLoadService {
@@ -13,8 +14,8 @@ public class WorkLoadService {
     @Autowired
     private OrderRepository orderRepository;
 
-    public Order placeOrder(Order order) {
-         return orderRepository.save(order);
+    public OrderItem placeOrder(OrderRequest orderRequest) {
+         return orderRepository.save(orderRequest);
     }
 
 

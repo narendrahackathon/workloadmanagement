@@ -1,17 +1,14 @@
-package com.wawa.hcl.workloadmanagement.entity;
+package com.wawa.hcl.workloadmanagement.dao;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
-@Table(name = "order")
-public class Order {
+@Table(name = "OrderItem")
+public class OrderItem implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -21,11 +18,9 @@ public class Order {
     private double total_price;
     private String order_desc;
     private Date createdAt;
-    private Item item;
-    private int checking = item.getItem_id();
     private List<Item> items_list;
 
-    public Order(int order_id, String user_id, int quantity, double total_price, String order_desc, Date createdAt) {
+    public OrderItem(int order_id, String user_id, int quantity, double total_price, String order_desc, Date createdAt) {
         super();
         this.order_id = order_id;
         this.user_id = user_id;
@@ -33,7 +28,7 @@ public class Order {
         this.total_price = total_price;
         this.order_desc = order_desc;
         this.createdAt = createdAt;
-        this.item = item;
+        //this.item = item;
     }
 
     public int getOrder_id() {
@@ -88,8 +83,8 @@ public class Order {
         return item;
     }
 
-    public void setItem(com.wawa.hcl.workloadmanagement.entity.Item item) {
-        this.item = item;
-    }
+    //public void setItem(com.wawa.hcl.workloadmanagement.entity.Item item) {
+     //   this.item = item;
+   // }
 
 }
