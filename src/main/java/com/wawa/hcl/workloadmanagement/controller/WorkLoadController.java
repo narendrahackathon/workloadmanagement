@@ -1,5 +1,6 @@
 package com.wawa.hcl.workloadmanagement.controller;
 
+import com.wawa.hcl.workloadmanagement.dao.OrderItem;
 import com.wawa.hcl.workloadmanagement.model.OrderRequest;
 import com.wawa.hcl.workloadmanagement.service.WorkLoadService;
 import org.hibernate.criterion.Order;
@@ -20,16 +21,9 @@ public class WorkLoadController implements HealthIndicator {
     WorkLoadService workLoadService;
 
     @PostMapping(path = "/order", consumes = "application/json" , produces = "application/json")
-    public ResponseEntity<Object> order(@RequestBody OrderRequest orderRequest){
-        workLoadService.placeOrder(orderRequest);
-        return null;
+    public OrderItem order(@RequestBody OrderItem orderRequest){
+        return workLoadService.placeOrder(orderRequest);
     }
-
-    @PostMapping(path = "/station", consumes = "application/json" , produces = "application/json")
-    public ResponseEntity<Object> station(@RequestBody Order station){
-        return null;
-    }
-
 
     @Override
     public Health getHealth(boolean includeDetails) {
