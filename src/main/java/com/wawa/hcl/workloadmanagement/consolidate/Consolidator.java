@@ -1,9 +1,9 @@
 package com.wawa.hcl.workloadmanagement.consolidate;
 
-import com.wawa.hcl.workloadmanagement.entity.Order;
+import com.wawa.hcl.workloadmanagement.dao.OrderItem;
 
 public interface Consolidator {
-	
-	public void consolidate(Order order);
+
+	public void consolidate(OrderItem order);
 
 }
